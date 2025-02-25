@@ -1,0 +1,126 @@
+#phone, #pc, #small-phone, #ipad{
+    display: none;
+}
+
+#ipad-slid{
+    display: block;
+}
+
+.header-ipad-slid{
+    height: 140px;
+}
+
+.nav-ipad-slid{
+    line-height: 80px;
+    height: 80px;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-header-ipad-slid{
+    height: 60px;
+    background-color: #f5ebef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: lightskyblue 2px solid;
+}
+
+.nav-header-ipad-slid a{
+    color: black;
+    display: block;
+    text-align: center;
+    height: 100%;
+    line-height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.nav-header-ipad-slid a:hover {
+    background-color: #cbdbed;
+    color: #3e97d4;
+}
+
+
+.home{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 垂直居中 */
+    flex-wrap: nowrap;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.home-icon{
+    font-size: 30px;
+    line-height: 80px;
+}
+
+.title-ipad-slid{
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 80px;
+}
+.wrap{
+    height: 100%;
+    width: 132px;
+    flex-grow: 1;
+    display: initial;
+}
+
+.search{
+    height: 100%;
+    padding-top: 25px;
+}
+
+.options{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.options a{
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: text-shadow 100ms linear;
+}
+
+.login-ipad-slid{
+    width: 550px;
+    margin: 30px auto;
+}
+
+/*
+    最近浏览商品
+ */
+.goods .ul-ipad-slid{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.goods-item-ipad-slid{
+    min-width: 300px;
+    width: 400px;
+    max-width: 500px;
+    flex-grow: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.goods-item-desc-text-ipad-slid{
+    /**
+        固定70px大小
+     */
+    max-height: 70px;
+    white-space: normal;
+    overflow: hidden;
+    font-weight: 400;
+}

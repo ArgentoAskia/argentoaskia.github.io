@@ -1,0 +1,401 @@
+/**
+    移动端、网页端通用样式，各子适配端可以重写当前文件的样式来达到适配效果
+    规范：一级样式主要引用此文件的样式，二级样式为各个适配端，以一级样式名 + 适配端名命名
+    比如：mobile-style-phone ==> nav-phone
+         mobile-style-ipad ==> nav-ipad
+         mobile-style-pc ==> nav-pc
+     如果是网页端：则使用具体的大小来区分：
+        browser-style-pc-1400 ==> nav-pc-1400
+        browser-style-pc-0-500 ==> nav-pc-0-500 (其中0为最小px，500为最大px)
+ */
+
+
+/**
+    顶部黄色位置大小
+ */
+.header{
+    height: 50px;
+    width: 100%;
+    background-color: orange;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/*
+    顶部导航栏
+ */
+.nav{
+    height: 100%;
+    line-height: 50px;
+    display: none;
+    font-size: 16px;
+    color: white;
+}
+
+
+/*
+    回家图标
+ */
+.home{
+    text-align: center;
+    text-shadow: none;
+    transition: text-shadow 100ms linear;
+    color: white;
+}
+
+.home:hover{
+    /*
+       文字发光效果
+    */
+    text-shadow:
+            0 0 5px rgba(255, 255, 255, 0.7),  /* 内层发光 */
+            0 0 10px rgba(255, 255, 255, 0.6), /* 中层发光 */
+            0 0 15px rgba(255, 255, 255, 0.5), /* 外层发光 */
+            0 0 20px rgba(255, 255, 255, 0.4); /* 最外层发光 */
+    cursor: pointer;
+    color: white;
+}
+.home:focus{
+    /*
+      文字发光效果
+   */
+    text-shadow:
+            0 0 5px rgba(255, 255, 255, 0.7),  /* 内层发光 */
+            0 0 10px rgba(255, 255, 255, 0.6), /* 中层发光 */
+            0 0 15px rgba(255, 255, 255, 0.5), /* 外层发光 */
+            0 0 20px rgba(255, 255, 255, 0.4); /* 最外层发光 */
+    cursor: pointer;
+    color: white;
+}
+
+/*
+标题宽度
+ */
+.title{
+    width: 100px;
+    text-align: center;
+}
+.nav-header{
+    display: none;
+}
+/*
+    PC端、ipad端、ipad横板中可拉伸的空白
+ */
+.wrap-hidden{
+    display: none;
+}
+/*
+    顶部菜单条右边弹出菜单
+ */
+.pop-menu{
+    display: none;
+}
+.options-hidden{
+    display: none;
+}
+
+/*
+登录部分相关样式
+ */
+.panel{
+    margin: 20px 15px;
+}
+.login{
+    text-align: center;
+}
+.login-title{
+    font-weight: bold;
+}
+.login-panel{
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: #e2e2e2 1px solid;
+}
+
+.login-panel-form{
+    text-align: left;
+    margin-top: 20px;
+    font-size: 15px;
+    padding: 5px;
+}
+
+/**
+最近浏览产品部分
+ */
+.recent-watch{
+    /**
+        离顶部的登录界面的小白线的距离
+     */
+    margin-top: 50px;
+}
+
+.recent-watch h2{
+    margin-bottom: 30px;
+}
+/*
+    取消默认的ul padding
+*/
+.goods ul{
+    padding-left: 0;
+}
+/**
+    li块
+ */
+.goods-item{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+.goods-item:hover{
+    color: orange ;
+}
+
+.good-item-border{
+    border-bottom: #e2e2e2 1px solid;
+}
+
+
+.goods-item-img{
+    display: inline-block;
+    min-height: 50px;
+    max-height: 100px;
+    width: 100px;
+    white-space: nowrap;
+    object-fit: cover;
+    object-position: 50%;
+    overflow: hidden;
+}
+
+.goods-item-desc{
+    /*display: inline-block;*/
+    width: 100%;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.goods-item-desc-text{
+    /**
+        如果无法显示，则隐藏文本
+     */
+    min-height: 70px;
+    font-weight: 500;
+}
+
+
+.goods-item-desc-price{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.goods-item-desc-price-text{
+    color: gray;
+    font-weight: 400;
+    cursor: text;
+}
+
+.goods-item-desc-price-link{
+    color: gray;
+    text-decoration-line: none;
+}
+
+
+
+/**
+底部footer
+ */
+.footer{
+    width: 100%;
+    /*height: 70px;*/
+    background-color: orange;
+}
+
+.copyright{
+    line-height: 35px;
+    /*height: 35px;*/
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.about{
+    line-height: 35px;
+    /*height: 35px;*/
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.about a:hover, .options a:hover{
+    /*
+       文字发光效果
+    */
+    text-shadow:
+            0 0 5px rgba(255, 255, 255, 0.7),  /* 内层发光 */
+            0 0 10px rgba(255, 255, 255, 0.6), /* 中层发光 */
+            0 0 15px rgba(255, 255, 255, 0.5), /* 外层发光 */
+            0 0 20px rgba(255, 255, 255, 0.4); /* 最外层发光 */
+    cursor: pointer;
+    color: white;
+}
+
+.about a:focus, .options a:focus{
+    /*
+       文字发光效果
+    */
+    text-shadow:
+            0 0 5px rgba(255, 255, 255, 0.7),  /* 内层发光 */
+            0 0 10px rgba(255, 255, 255, 0.6), /* 中层发光 */
+            0 0 15px rgba(255, 255, 255, 0.5), /* 外层发光 */
+            0 0 20px rgba(255, 255, 255, 0.4); /* 最外层发光 */
+    cursor: pointer;
+    color: white;
+}
+
+
+/*************************
+    BootStrap 相关样式重写
+***************************/
+/**
+    重写按钮活得焦点时的颜色
+ */
+.btn-orange-color{
+    border-color: orange;
+    color: orange;
+}
+.btn-orange{
+    border: none;
+    color: white;
+    background-color: orange;
+}
+.btn-orange:hover{
+    color: white;
+}
+.btn-orange:focus{
+    box-shadow: 0 0 0 .25rem rgba(248, 128, 15, 0.25);
+}
+/*
+    紧跟在btn-orange后面的所有a标签，用于改变忘记密码
+ */
+.btn-orange+a{
+    color: orange;
+}
+
+.btn-orange+a:hover{
+    color: orange;
+    text-shadow:
+            0 0 5px rgba(255, 255, 255, 0.7),  /* 内层发光 */
+            0 0 10px rgba(255, 255, 255, 0.6), /* 中层发光 */
+            0 0 15px rgba(255, 255, 255, 0.5), /* 外层发光 */
+            0 0 20px rgba(255, 255, 255, 0.4); /* 最外层发光*/
+}
+
+.btn-check:checked + .btn-outline-primary{
+    background-color: orange;
+    border-color: orange;
+}
+.btn-check:active + .btn-outline-primary{
+    color: #fff;
+    background-color: orange;
+    border-color: orange;
+}
+
+.btn-check:checked + .btn-outline-primary:focus{
+    box-shadow: 0 0 0 .1rem rgba(239, 105, 7, 0.5);
+}
+.btn-check:focus + .btn-outline-primary{
+    box-shadow: 0 0 0 .1rem rgba(239, 105, 7, 0.5);
+}
+.btn-outline-primary:focus {
+    box-shadow: 0 0 0 .1rem rgba(239, 105, 7, 0.5);
+}
+
+.btn-outline-primary:active:focus {
+    box-shadow: 0 0 0 .1rem rgba(239, 105, 7, 0.5);
+}
+
+.btn-outline-primary:active {
+    color: #fff;
+    background-color: orange;
+    border-color: orange;
+    box-shadow: 0 0 0 .1rem rgba(239, 105, 7, 0.5);
+}
+.btn-outline-primary:hover{
+    background-color: orange;
+    color: white;
+    box-shadow: 0 0 0 .1rem rgba(239, 105, 7, 0.5);
+    border-color: orange;
+}
+/**
+    重写按钮活得焦点时的颜色结束
+ */
+
+/**
+    改变bootstrap的搜索框样式
+ */
+.form-control{
+    border-radius: 30px;
+    box-shadow: 0 0 0 .1px rgba(255, 255, 255, 0.5);
+}
+.input{
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: orange;
+    outline: 0;
+    box-shadow: 0 0 0 .1rem rgba(239, 105, 7, 0.5);
+}
+.btn-outline-secondary{
+    color: #e2e2e2;
+    background-color: white;
+    border-color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 0 .1rem rgba(239, 105, 7, 0.5);
+}
+.btn-outline-secondary:hover {
+    color: #fff;
+    background-color: orange;
+    border-color: orange;
+}
+.btn-outline-secondary:active {
+    color: #e2e2e2;
+    background-color: white;
+    border-color: orange;
+}
+.btn-outline-secondary:focus {
+    box-shadow: 0 0 0 .1rem rgba(239, 105, 7, 0.5);
+}
+.btn-outline-secondary:active:focus {
+    box-shadow: 0 0 0 .1rem rgba(255, 255, 255, 0.5);
+}
+
+
+
+/*
+    侧边菜单弹出特效
+ */
+.offcanvas {
+    transition-property: transform;
+    transition-duration: 150ms;
+    transition-timing-function: linear;
+    transition-delay: 50ms;
+}
+
+/*
+    侧边栏关闭按钮(不改变btn-close的重写)
+ */
+.btn-close-button{
+    border: white 2px solid;
+    transition: all .1s linear;
+}
+.btn-close-button:hover, .btn-close-button:focus {
+    outline: 0;
+    border: #000000 2px solid;
+    border-radius: 10px;
+    opacity: 1;
+    box-shadow: none;   /*去除蓝色阴影*/
+}

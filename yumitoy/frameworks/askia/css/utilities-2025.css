@@ -1,0 +1,233 @@
+/*
+    @author Askia
+    @date   2025
+    用于Sass、less等预编译器，可以直接用于项目的工具css文件
+    主题包括：（可以直接搜索相关主题定位相关提示）
+        - 字体相关
+        - 文本相关
+ */
+*{
+    margin: 0;
+    padding: 0;
+}
+/*
+    如需要，请重写这些变量
+ */
+:root{
+    --font-size: 20px;
+}
+/*********************************
+    字体相关CSS
+ *********************************/
+.font-100{
+    font-weight: 100;
+}
+.font-200{
+    font-weight: 200;
+}
+.font-300{
+    font-weight: 300;
+}
+.font-400{
+    font-weight: 400;
+}
+.font-500{
+    font-weight: 500;
+}
+.font-600{
+    font-weight: 600;
+}
+.font-700{
+    font-weight: 700;
+}
+.font-800{
+    font-weight: 700;
+}
+.font-900{
+    font-weight: 700;
+}
+.font-bold{
+    font-weight: bold;
+}
+.font-bolder{
+    font-weight: bolder;
+}
+.font-italic{
+    font-style: italic;
+}
+.font-16px{
+    font-size: 16px;
+}
+.font-32px{
+    font-size: 32px;
+}
+.font-64px{
+    font-size: 64px;
+}
+.font-24px{
+    font-size: 24px;
+}
+.font-8px{
+    font-size: 8px;
+}
+.font-4px{
+    font-size: 4px;
+}
+.font-var-px{
+    font-size: var(--font-size);
+}
+
+
+
+
+
+
+
+
+
+.opacity-40{
+    opacity: 40%;
+}
+.opacity-50{
+    opacity: 50%;
+}
+
+
+.padding-2px{
+    padding: 2px;
+}
+
+.padding-left-2px{
+    padding-left: 2px;
+}
+.padding-right-2px{
+    padding-right: 2px;
+}
+.padding-top-2px{
+    padding-top: 2px;
+}
+.padding-bottom-2px{
+    padding-bottom: 2px;
+}
+
+.margin-2px{
+    margin: 2px;
+}
+
+.margin-5px{
+    margin: 5px;
+}
+.margin-top-5px{
+    margin-top: 5px;
+}
+.margin-top-10px{
+    margin-top: 10px;
+}
+
+.width-80-per{
+    width: 80%;
+}
+.width-100-per{
+    width: 100%;
+}
+
+
+.block-display{
+    display: block;
+}
+.display-block{
+    display: block;
+}
+.display-none{
+    display: none;
+}
+.none-display{
+    display: none;
+}
+
+.inline-display{
+    display: inline;
+}
+.display-inline{
+    display: inline;
+}
+.display-inline-block{
+    display: inline-block;
+}
+.inline-block-display{
+    display: inline-block;
+}
+.display-init{
+    display: initial;
+}
+.display-init-ipt{
+    display: initial !important;
+}
+
+
+.delete-a-under-line{
+    text-decoration-line: none;
+}
+
+
+.delete-ul-list-style{
+    list-style-type: none;
+}
+
+.line-text-center-30px{
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+    white-space: nowrap;
+}
+.line-text-overflow-hidden-show-ellipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-delete-line{
+    text-decoration-line: line-through;
+}
+
+
+.text-none-line{
+    text-decoration-line: none;
+}
+.text-align-center{
+    text-align: center;
+}
+
+.color-gray{
+    color: gray;
+}
+
+.color-black{
+    color: black;
+}
+
+.color-white{
+    color: white;
+}
+.color-red{
+    color: red;
+}
+
+
+.cursor-hand{
+    cursor: pointer;
+}
+
+.cursor-default-point{
+    cursor: default;
+}
+.cursor-auto{
+    cursor: auto;
+}
+.cursor-crosshair{
+    cursor: crosshair;
+}
+
+.cursor-text{
+    cursor: text;
+}

@@ -1,0 +1,130 @@
+/**
+style-phone只需要负责调整布局，宽度，高度等设置，类似字体颜色，背景颜色等内容直接委托common.css执行
+
+ */
+
+/*
+手机端，因此非手机端全部不可见
+ */
+#pc, #ipad-slid, #ipad, #small-phone{
+    display: none;
+}
+
+#phone{
+    display: block;
+}
+
+.nav-phone{
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+/*
+回家图标
+ */
+.home-phone{
+    margin-left: 20px;
+    font-size: 22px;
+    height: 100%;
+    width: 150px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; /* 垂直居中 */
+    flex-wrap: nowrap;
+}
+
+/*
+标题宽度
+ */
+.title-phone{
+    font-weight: bold;
+}
+
+/*
+    搜索框
+ */
+.search-phone{
+    height: 100%;
+    padding-top: 6px;
+    max-width: 250px;
+    flex-grow: 1;
+}
+
+.pop-menu-phone{
+    text-align: right;
+    margin-right: 20px;
+    font-size: 22px;
+    width: 150px;
+    display: initial;
+}
+/*
+    弹出菜单按钮
+ */
+.pop-menu-phone .pop-menu-button-phone{
+    color: white;
+    text-shadow: none;
+    transition: text-shadow 100ms linear;
+}
+
+.pop-menu-phone .pop-menu-button-phone:hover{
+    /*
+      文字发光效果
+   */
+    text-shadow:
+            0 0 5px rgba(255, 255, 255, 0.7),  /* 内层发光 */
+            0 0 10px rgba(255, 255, 255, 0.6), /* 中层发光 */
+            0 0 15px rgba(255, 255, 255, 0.5), /* 外层发光 */
+            0 0 20px rgba(255, 255, 255, 0.4); /* 最外层发光 */
+    cursor: pointer;
+    color: white;
+}
+
+/*
+    弹出菜单容器
+ */
+.pop-menu-container-phone{
+    color: black;
+    min-width: 100px;
+    max-width: 250px;
+}
+
+/*
+    弹出菜单标题
+ */
+.pop-menu-container-phone .pop-menu-container-header-phone h5{
+    font-weight: bold;
+    text-align: center; /* 文本居中 */
+    margin: 0 auto; /* 居中 */
+    font-size: 25px;
+}
+
+
+/*
+    弹出菜单body(菜单项容器)
+ */
+.pop-menu-container-body-phone{
+    width: 100%;
+    padding: 0;
+    margin-top: 10px;
+}
+.pop-menu-container-body-item-phone{
+    text-align: left;
+    padding-left: 50px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    color: black;
+    display: block;
+    font-weight: 300;
+    background-color: white;
+    /* 过渡效果 */
+    transition: all 150ms ease-in-out;
+}
+
+.pop-menu-container-body-item-phone:hover{
+    color: white;
+    background-color: orange;
+}
+
+.pop-menu-container-body-item-phone:focus{
+    box-shadow: none;
+}

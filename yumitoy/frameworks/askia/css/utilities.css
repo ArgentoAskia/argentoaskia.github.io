@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*********************************
+    字体相关CSS
+ *********************************/
+.font-weight-300{
+    font-weight: 300;
+}
+
+.opacity-40{
+    opacity: 40%;
+}
+.opacity-50{
+    opacity: 50%;
+}
+
+.font-weight-400{
+    font-weight: 400;
+}
+
+.font-weight-bold{
+    font-weight: bold;
+}
+.font-weight-bolder{
+    font-weight: bolder;
+}
+
+.padding-2px{
+    padding: 2px;
+}
+
+.padding-left-2px{
+    padding-left: 2px;
+}
+.padding-right-2px{
+    padding-right: 2px;
+}
+.padding-top-2px{
+    padding-top: 2px;
+}
+.padding-bottom-2px{
+    padding-bottom: 2px;
+}
+
+.margin-2px{
+    margin: 2px;
+}
+
+.margin-5px{
+    margin: 5px;
+}
+.margin-top-5px{
+    margin-top: 5px;
+}
+.margin-top-10px{
+    margin-top: 10px;
+}
+
+.width-80-per{
+    width: 80%;
+}
+.width-100-per{
+    width: 100%;
+}
+
+
+.block-display{
+    display: block;
+}
+.display-block{
+    display: block;
+}
+.display-none{
+    display: none;
+}
+.none-display{
+    display: none;
+}
+
+.inline-display{
+    display: inline;
+}
+.display-inline{
+    display: inline;
+}
+.display-inline-block{
+    display: inline-block;
+}
+.inline-block-display{
+    display: inline-block;
+}
+.display-init{
+    display: initial;
+}
+.display-init-ipt{
+    display: initial !important;
+}
+
+
+.delete-a-under-line{
+    text-decoration-line: none;
+}
+
+
+.delete-ul-list-style{
+    list-style-type: none;
+}
+
+.line-text-center-30px{
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+    white-space: nowrap;
+}
+.line-text-overflow-hidden-show-ellipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-delete-line{
+    text-decoration-line: line-through;
+}
+
+
+.text-none-line{
+    text-decoration-line: none;
+}
+.text-align-center{
+    text-align: center;
+}
+
+.color-gray{
+    color: gray;
+}
+
+.color-black{
+    color: black;
+}
+
+.color-white{
+    color: white;
+}
+.color-red{
+    color: red;
+}
+
+
+.cursor-hand{
+    cursor: pointer;
+}
+
+.cursor-default-point{
+    cursor: default;
+}
+.cursor-auto{
+    cursor: auto;
+}
+.cursor-crosshair{
+    cursor: crosshair;
+}
+
+.cursor-text{
+    cursor: text;
+}

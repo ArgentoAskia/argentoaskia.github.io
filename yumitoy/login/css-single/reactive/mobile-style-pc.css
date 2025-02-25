@@ -1,0 +1,144 @@
+#ipad-slid, #phone, #ipad, #small-phone{
+    display: none;
+}
+#pc{
+    display: block;
+}
+
+
+.header-pc{
+    height: 140px;
+}
+
+/*
+    PC端特有导航栏
+ */
+.nav-pc{
+    height: 80px;
+    line-height: 80px;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-header-pc{
+    height: 60px;
+    background-color: #f5ebef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: lightskyblue 2px solid;
+}
+
+.nav-header-pc a{
+    color: black;
+    display: block;
+    text-align: center;
+    height: 100%;
+    line-height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.nav-header-pc a:hover {
+    background-color: #cbdbed;
+    transition: all .2s linear;
+    color: #3e97d4;
+    cursor: pointer;
+}
+
+.home{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 垂直居中 */
+    flex-wrap: nowrap;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.home-icon{
+    font-size: 30px;
+    line-height: 80px;
+}
+
+.title-pc{
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 80px;
+}
+.wrap{
+    height: 100%;
+    width: 132px;
+    flex-grow: 1;
+    display: initial;
+}
+
+.search{
+    height: 100%;
+    padding-top: 25px;
+    width: 350px;
+    max-width: 400px;
+}
+.options{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.options a{
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: text-shadow 100ms linear;
+}
+
+
+
+.login-pc{
+    width: 550px;
+    margin: 30px auto;
+}
+
+
+/*
+    最近浏览商品
+ */
+.goods .ul-pc{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.goods-item-pc{
+    min-width: 300px;
+    width: 500px;
+    max-width: 600px;
+    flex-grow: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+@media screen and (min-width: 1400px){
+    .goods-item-pc{
+        min-width: 300px;
+        width: 400px;
+        max-width: 1000px;
+        flex-grow: 1;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+.goods-item-desc-text-pc{
+    /**
+        固定70px大小
+     */
+    max-height: 70px;
+    white-space: normal;
+    overflow: hidden;
+    font-weight: 400;
+}

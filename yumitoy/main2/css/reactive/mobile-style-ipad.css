@@ -1,0 +1,448 @@
+#ipad-slid, #pc, #small-phone, #phone{
+    display: none;
+}
+
+#ipad{
+    display: block;
+}
+
+.header-ipad{
+    height: 120px;
+}
+
+.nav-ipad{
+    line-height: 60px;
+    height: 60px;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.nav-header-ipad{
+    height: 60px;
+    background-color: #f5ebef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: lightskyblue 2px solid;
+}
+
+.nav-header-ipad a{
+    color: black;
+    display: block;
+    text-align: center;
+    height: 100%;
+    line-height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.nav-header-ipad a:hover {
+    background-color: #cbdbed;
+    transition: all .2s linear;
+    color: #3e97d4;
+    cursor: pointer;
+}
+
+
+.home{
+    height: 100%;
+    width: 250px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; /* 垂直居中 */
+    flex-wrap: nowrap;
+    font-size: 25px;
+}
+
+.home-icon{
+    font-size: 25px;
+    line-height: 60px;
+}
+
+.title-ipad{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 60px;
+}
+
+.search{
+    height: 100%;
+    padding-top: 10px;
+    width: 250px;
+    flex-grow: 1;
+}
+
+.pop-menu-ipad{
+    text-align: right;
+    font-size: 22px;
+    width: 250px;
+}
+/*
+    弹出菜单按钮
+ */
+.pop-menu-ipad .pop-menu-button-ipad{
+    color: white;
+    text-shadow: none;
+    transition: text-shadow 100ms linear;
+}
+
+.pop-menu-ipad .pop-menu-button-ipad:hover{
+    /*
+      文字发光效果
+   */
+    text-shadow:
+            0 0 5px rgba(255, 255, 255, 0.7),  /* 内层发光 */
+            0 0 10px rgba(255, 255, 255, 0.6), /* 中层发光 */
+            0 0 15px rgba(255, 255, 255, 0.5), /* 外层发光 */
+            0 0 20px rgba(255, 255, 255, 0.4); /* 最外层发光 */
+    cursor: pointer;
+    color: white;
+}
+
+.pop-menu-container-ipad{
+    color: black;
+    min-width: 100px;
+    max-width: 250px;
+}
+
+/*
+    弹出菜单标题
+ */
+.pop-menu-container-ipad .pop-menu-container-header-ipad h5{
+    font-weight: bold;
+    text-align: center; /* 文本居中 */
+    margin: 0 auto; /* 居中 */
+    font-size: 25px;
+}
+
+/*
+    弹出菜单body(菜单项容器)
+ */
+.pop-menu-container-body-ipad{
+    width: 100%;
+    padding: 0;
+    margin-top: 10px;
+}
+.pop-menu-container-body-item-ipad{
+    text-align: left;
+    padding-left: 50px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    color: black;
+    display: block;
+    font-weight: 300;
+    background-color: white;
+    /* 过渡效果 */
+    transition: all 150ms ease-in-out;
+}
+
+.pop-menu-container-body-item-ipad:hover{
+    color: white;
+    background-color: orange;
+}
+
+.pop-menu-container-body-item-ipad:focus{
+    box-shadow: none;
+    background-color: orange;
+    color: white;
+    border: white 2px solid;
+}
+
+
+
+/**
+    轮播台
+ */
+
+
+/*
+    轮播台外层
+ */
+.carousel-main{
+    width: 100%;
+    height: 350px;
+}
+/*  轮播台底部切换按钮 */
+.carousel-indicators-button{
+    background-color: gray !important;
+}
+/*
+    轮播内容框
+ */
+.carousel-inner{
+    height: 100%;
+}
+
+.carousel-item{
+    height: 100%;
+    position: relative;
+}
+
+/*
+     ipad 手机端适配底部按钮不要和图片贴太近
+ */
+.carousel-indicators{
+    margin-bottom: 0;
+}
+
+
+/*
+    轮播内容背景
+ */
+.carousel-item .background{
+    background-color: black;
+    position: absolute;
+    top: 0;
+    height: 90%;
+    object-fit: cover;
+    filter: blur(6px);
+    z-index: -1;
+}
+
+/*
+    轮播内容(轮播图)
+ */
+.carousel-item .image{
+    position: absolute;
+    top: 0;
+    object-fit: contain;
+    height: 90%;
+}
+
+
+/*
+     面包小人导航栏
+ */
+.icon-nav{
+    margin: 30px auto;
+
+}
+
+.icon-nav .icon-nav-decoration{
+    display: grid;  /* gird布局 */
+    grid-template-rows: auto;   /* 行不限制 */
+    grid-template-columns: repeat(6, minmax(0, 3fr));   /* 一列5个 */
+    grid-auto-flow: row;    /* 列元素自动增长宽度 */
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-gap: 15px;     /* 列中元素和元素之间的距离 */
+    border: #ffa602 solid 2px;
+    border-radius: 10px;
+}
+/*
+    可以设置块级元素可以调整大小
+ */
+.icon-nav .icon-nav-decoration .icon-nav-item{
+    display: block;
+    padding: 15px 20px;
+    text-decoration-line: none;
+}
+
+.icon-nav .icon-nav-decoration .icon-nav-item img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    display: block;
+    border-width: 2px;
+    border-color: #dddddd;
+    border-radius: 10px;
+    border-style: solid;
+    padding: 10px;
+}
+
+.icon-nav .icon-nav-decoration .icon-nav-item div{
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5vw;
+    margin-top: 5px;
+}
+.icon-nav .icon-nav-decoration .icon-nav-item div:hover{
+    color: black;
+}
+
+/*
+     中间网页部分-商品
+ */
+.part-title{
+    font-weight: 600;
+    margin-left: 20px;
+}
+.part-line{
+    border: 2px black solid;
+    margin: 30px 20px 20px;
+}
+/*
+     商品展示区域
+ */
+.part-goods{
+    display: grid;  /* gird布局 */
+    grid-template-rows: auto;   /* 行不限制 */
+    grid-template-columns: repeat(3, minmax(0, 3fr));   /* 一列5个 */
+    grid-auto-flow: row;    /* 列元素自动增长宽度 */
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-gap: 20px;     /* 列中元素和元素之间的距离 */
+}
+
+/*
+    商品展示框外层边框
+ */
+.part-goods-item-border{
+    /*边框效果*/
+    border-style: solid;
+    border-radius: 3px;
+    border-width: 2px;
+    border-color: #eeeeee;
+    /*max-width: 260px;*/
+    /*margin-top: 10px;*/
+    /*margin-bottom: 30px;*/
+}
+
+.part-goods-item-border:hover{
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    box-shadow:  0 2px 20px rgba(0, 0, 0, 0.2), /* 主阴影 */
+    0 2px 50px rgba(0, 0, 0, 0.1); /* 晕染效果 */
+}
+
+/*
+    单个商品展示框
+ */
+.part-good-item{
+    max-width: 100%;
+    max-height: 500px;
+}
+
+/*
+    图片展示框
+ */
+.part-good-item-image{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/*
+    图片展示框中的图片布局
+    为了实现对任何尺寸的图片都适配，使用了图像调整和剪贴，
+    但建议提供的图像比例是：500:667的比值，此比值的图像显示效果最好！
+ */
+.part-good-item-image img{
+    object-fit: cover;
+    object-position: 55% center;
+    width: 100%;
+    height: 310px;
+}
+
+/*
+    顶部预定、现货、预定结束图标
+ */
+.part-good-item-image .part-good-item-image-on-sale{
+    position: absolute;
+    background-color: #3e97d4;
+    padding: 2px 5px;
+    color: white;
+}
+.part-good-item-image .part-good-item-image-on-reserve{
+    position: absolute;
+    background-color: #956fe6;
+    padding: 2px 5px;
+    color: white;
+}
+.part-good-item-image .part-good-item-image-not-on-reserve{
+    position: absolute;
+    background-color: #ff5e5e;
+    padding: 2px 5px;
+    color: white;
+    z-index: 50;
+}
+
+/*
+    热销图标
+ */
+.part-good-item-image .part-good-item-image-hot-sale{
+    position: absolute;
+    right: 0;
+    top:0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url('../../img/hot.png');
+    width: 35px;
+    height: 35px;
+}
+
+/*
+    中间缺货图标
+ */
+.part-good-item-image .part-good-item-image-sale-out{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    background-image: url('../../img/sale-out-logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 65%
+}
+/*
+商品信息外框
+ */
+.part-good-item-messages{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+/*
+    商品生产商信息部分
+ */
+.part-good-item-manufacturer {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    max-height: 30px;
+}
+.part-good-item-manufacturer a{
+    color: #0090f9;
+    font-size: 14px;
+}
+
+/*
+    商品名称部分
+ */
+.part-good-item-name{
+    margin-top: 2px;
+    /* 此处设置父元素字体大小，已方便调整子元素a的文本行间距 */
+    font-size: 15px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    max-width: 100%;
+    height: 70px;
+}
+.part-good-item-name a{
+    font-weight: 600;
+    font-family: 微軟正黑體, 微软雅黑, serif;
+    font-size: 18px;
+    color: black;
+    line-height: 1.2em;
+    word-break: break-all;
+}
+
+/*
+    商品价格
+ */
+.part-good-item-price{
+    color: red;
+    font-size: 15px;
+    font-weight: 600;
+}
+.part-good-item-price .text-delete-line{
+    opacity: 40%;
+}

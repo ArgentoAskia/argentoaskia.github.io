@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop Image Sorter</title>
+    <style>
+        /* 容器样式 */
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            min-height: 200px;
+        }
+
+        /* 可拖拽图片样式 */
+        .draggable-image {
+            width: 150px;
+            height: 150px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 5px;
+            margin: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: move;
+            background-color: #fff;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+
+        .draggable-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* 拖拽时的样式 */
+        .draggable-image.dragging {
+            opacity: 0.5;
+            transform: scale(0.95);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 放置目标样式 */
+        .placeholder {
+            width: 150px;
+            height: 150px;
+            background-color: #f0f0f0;
+            border: 2px dashed #999;
+            border-radius: 8px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="image-container" id="imageContainer">
+    <!-- 图片元素，可根据实际需求动态添加 -->
+    <div class="draggable-image" draggable="true">
+        <img src="https://via.placeholder.com/150x150?text=Image+1" alt="Image 1">
+    </div>
+    <div class="draggable-image" draggable="true">
+        <img src="https://via.placeholder.com/150x150?text=Image+2" alt="Image 2">
+    </div>
+    <div class="draggable-image" draggable="true">
+        <img src="https://via.placeholder.com/150x150?text=Image+3" alt="Image 3">
+    </div>
+    <div class="draggable-image" draggable="true">
+        <img src="https://via.placeholder.com/150x150?text=Image+4" alt="Image 4">
+    </div>
+</div>
+
+<script>
+    // 获取容器元素
+    const imageContainer = document.getElementById('imageContainer');
+    let dragSrcEl = null; // 被拖拽的元素
+    let placeholder = null; // 占位元素
+
+    // 拖拽开始事件
+    function dragStart(event) {
+        dragSrcEl = event.target;
+        event.dataTransfer.effectAllowed = 'move';
+        // 创建占位元素
+        placeholder = document.createElement('div');
+        placeholder.classList.add('placeholder');
+        // 插入占位元素到原位置
+        dragSrcEl.parentNode.insertBefore(placeholder, dragSrcEl);
+        dragSrcEl.classList.add('dragging');
+    }
+
+    // 拖拽结束事件
+    function dragEnd(event) {
+        if (placeholder) {
+            placeholder.parentNode.removeChild(placeholder);
+        }
+        dragSrcEl.classList.remove('dragging');
+        placeholder = null;
+        dragSrcEl = null;
+    }
+
+    // 拖拽进入目标区域事件
+    function dragEnter(event) {
+        event.preventDefault();
+        event.dataTransfer.dropEffect = 'move';
+    }
+
+    // 拖拽离开目标区域事件
+    function dragLeave(event) {
+        event.target.classList.remove('over');
+    }
+
+    // 拖拽在目标区域上方移动事件
+    function dragOver(event) {
+        event.preventDefault();
+        const target = event.target;
+        // 确保目标是可拖拽图片或占位元素
+        if (target.classList.contains('draggable-image') || target.classList.contains('placeholder')) {
+            return;
+        }
+        target.classList.add('over');
+    }
+
+    // 拖拽释放事件
+    function drop(event) {
+        event.preventDefault();
+        const dropzone = event.target;
+        // 确保拖拽目标是容器内部的元素
+        if (dropzone.classList.contains('image-container')) {
+            // 计算鼠标位置，确定插入位置
+            const rect = dropzone.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            const children = Array.from(dropzone.children).filter(child => child !== placeholder);
+            let i;
+
+            for (i = 0; i < children.length; i++) {
+                const child = children[i];
+                const childRect = child.getBoundingClientRect();
+                if (y < childRect.top - rect.top + childRect.height / 2) {
+                    break;
+                }
+            }
+
+            // 插入被拖拽元素到目标位置
+            dropzone.insertBefore(dragSrcEl, children[i]);
+            placeholder.parentNode.removeChild(placeholder);
+        }
+        placeholder = null;
+        dragSrcEl = null;
+    }
+
+    // 事件绑定
+    document.querySelectorAll('.draggable-image').forEach(item => {
+        item.addEventListener('dragstart', dragStart);
+        item.addEventListener('dragend', dragEnd);
+    });
+
+    imageContainer.addEventListener('dragenter', dragEnter);
+    imageContainer.addEventListener('dragover', dragOver);
+    imageContainer.addEventListener('dragleave', dragLeave);
+    imageContainer.addEventListener('drop', drop);
+</script>
+</body>
+</html>

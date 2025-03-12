@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的账户-Yumitoy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 按照BootStrap 5网格系统的约定,
+        认为小于576px的宽度都是市面上的小型手机,包括老的安卓和IOS机型
+        认为大于576px到1000px之间的适配比为平板宽度或者手机横向屏幕的宽度
+            后期中间增加了两个适配度，为现代的安卓机型和IOS机型，以及Ipad可进行适配，根据Ipad 768px为界限
+            其中 576px - 768px为现代IOS设备、安卓设备以及早期版本的Ipad
+            而768px - 1000px则主要是Ipad Mini、Surface等平板电脑！为主
+        大于1000px到1200px为平板横向屏幕的宽度
+        大于1200px为PC宽度!
+    -->
+    <!-- bootstrap 5-->
+<!--    <link rel="stylesheet" href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/twitter-bootstrap/5.1.3/css/bootstrap.min.css">-->
+    <link href="https://cdn.staticfile.net/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.net/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+    <!-- 图标库 -->
+    <link rel="stylesheet" href="css/fontawesome-free-5.15.4-web/css/all.css">
+    <!-- 通用工具样式 -->
+    <link rel="stylesheet" href="css/utilities.css">
+    <!-- 通用样式提取 -->
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- 移动设备、浏览器端适配 -->
+    <!--  老安卓 IOS机型适配 -->
+    <link rel="stylesheet" href="css/reactive/mobile-style-small-phone.css" media="screen and (max-width:575px)">
+    <!-- 现代化安卓、IOS机型适配 -->
+    <link rel="stylesheet" href="css/reactive/mobile-style-phone.css" media="screen and (min-width:576px) and (max-width:767px)">
+    <!-- ipad竖屏、surface适配 -->
+    <link rel="stylesheet" href="css/reactive/mobile-style-ipad.css" media="screen and (min-width:768px) and (max-width: 999px)">
+    <!-- ipad横屏适配 -->
+    <link rel="stylesheet" href="css/reactive/mobile-style-ipad-slid.css" media="screen and (min-width:1000px) and (max-width: 1199px)">
+    <!-- 大型平板电脑触控 -->
+    <link rel="stylesheet" href="css/reactive/mobile-style-pc.css" media="screen and (min-width:1200px)">
+</head>
+<body>
+
+<!-- 网页大面板-->
+<div class="container-fluid p-0">
+
+    <!-- 小型手机端适配 -->
+    <div id="small-phone">
+        <!-- 顶部导航栏 + 网页眉-->
+        <div class="header">
+            <!-- 顶部导航栏 -->
+            <div class="nav">
+                <!-- 主页按钮 -->
+                <a href="#" class="home home-small-phone"><i class="fa fa-home" aria-hidden="true"></i></a>
+                <!-- 标题 -->
+                <div class="title title-small-phone">Yumitoy</div>
+                <!-- 弹出菜单 -->
+                <div class="pop-menu-small-phone">
+                    <!-- 图标 -->
+                    <!-- a标签中的href指向offcanvas中的div中的id即可弹出 -->
+                    <a class="pop-menu-button-small-phone" href="#offcanvasRight-small-phone" role="button" data-bs-toggle="offcanvas" aria-controls="offcanvasRight-small-phone"><i class="fa fa-align-justify" aria-hidden="true"></i></a>
+                    <div class="offcanvas offcanvas-end pop-menu-container-small-phone" tabindex="-1" id="offcanvasRight-small-phone" aria-labelledby="offcanvasRightLabel-small-phone">
+                        <div class="offcanvas-header pop-menu-container-header-small-phone">
+                            <h5 id="offcanvasRightLabel-small-phone">Yumitoy</h5>
+                            <button type="button" class="btn-close text-reset btn-close-button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body pop-menu-container-body-small-phone">
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-small-phone">我的账户</a>
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-small-phone">购物车</a>
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-small-phone">新登预定</a>
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-small-phone">截单日期</a>
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-small-phone">现货发售</a>
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-small-phone">补款专区</a>
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-small-phone">R18</a>
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-small-phone">品牌分类</a>
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-small-phone">搜索</a>
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-small-phone"><img src="img/zh_CN.png" alt="">&nbsp;ZH</a>
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-small-phone"><img src="img/zh_HK.png" alt="">&nbsp;HK</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 中间登录部分 + 最近浏览商品-->
+        <div class="panel">
+            <!-- 轮播 -->
+            <div id="carouselExampleIndicators-small-phone" class="carousel slide carousel-main" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselExampleIndicators-small-phone" data-bs-slide-to="0" class="carousel-indicators-button active"></li>
+                    <li data-bs-target="#carouselExampleIndicators-small-phone" data-bs-slide-to="1" class="carousel-indicators-button"></li>
+                    <li  data-bs-target="#carouselExampleIndicators-small-phone" data-bs-slide-to="2" class="carousel-indicators-button"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/Carousel-image-1-1245x704.png" alt="..." class="d-block w-100 background">
+                        <img src="img/Carousel-image-1-1245x704.png" class="d-block w-100 image" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/Carousel-image-3-1311x1966.png" class="d-block w-100 background" alt="...">
+                        <img src="img/Carousel-image-3-1311x1966.png" class="d-block w-100 image" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/Carousel-image-2-1124x794.png" class="d-block w-100 background" alt="...">
+                        <img src="img/Carousel-image-2-1124x794.png" class="d-block w-100 image" alt="...">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators-small-phone" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators-small-phone" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+
+            <!-- 面包按钮 -->
+            <div class="icon-nav">
+                <div class="icon-nav-decoration">
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide1-2-nw.png" alt=""/>
+                        <div>Figures</div>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide2-2-nw.png" alt=""/>
+                        <div>成品可动</div>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide3-2-nw.png" alt=""/>
+                        <div>拼装模型</div>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide4-2-nw.png" alt=""/>
+                        <div>粘土人</div>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide5-2-nw.png" alt=""/>
+                        <div>毛绒玩具</div>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide6-2-nw.png" alt=""/>
+                        <div>批发</div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 现货发售 -->
+            <div class="part">
+                <!-- 标题 -->
+                <h3 class="part-title">现货发售</h3>
+                <!-- 下划线 -->
+                <div class="part-line"></div>
+                <!-- 商品 -->
+                <div class="part-goods">
+                    <!-- 商品(有货) -->
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-on-sale">现货</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-500x667.jpg" alt="">
+                                <!-- 促销 -->
+                                <div class="part-good-item-image-hot-sale"></div>
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.1000 附赠特典，首印画册、红白相框、钥匙扣等免费赠送</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span>$1,750.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-on-sale">现货</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-640x531.jpeg" alt="">
+                                <!-- 促销 -->
+                                <div class="part-good-item-image-hot-sale"></div>
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.1000 附赠特典，首印画册、红白相框、钥匙扣等免费赠送</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span>$1,750.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 商品(有货, 改价) -->
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-on-reserve">预定</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-500x451.jpg" alt="">
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span class="text-delete-line">$1,750.00</span>&nbsp;<span>$1,000.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-on-reserve">预定</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-400x600-2.webp" alt="">
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span class="text-delete-line">$1,750.00</span>&nbsp;<span>$1,000.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 商品(缺货) -->
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-not-on-reserve">预定已结束</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-1920x1080.jpg" alt="">
+                                <!-- 缺货 -->
+                                <div class="part-good-item-image-sale-out"></div>
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span class="text-delete-line">$1,750.00</span>&nbsp;<span>$1,000.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-not-on-reserve">预定已结束</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-400x600.webp" alt="">
+                                <!-- 促销 -->
+                                <div class="part-good-item-image-hot-sale"></div>
+                                <!-- 缺货 -->
+                                <div class="part-good-item-image-sale-out"></div>
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span class="text-delete-line">$1,750.00</span>&nbsp;<span>$1,000.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部页脚 -->
+        <div class="footer">
+            <!-- 版权信息 -->
+            <div class="copyright text-align-center color-white cursor-text">Copyright © 2025 Yumitoy | All Rights Reserved</div>
+            <!-- 关于我们 -->
+            <div class="about text-align-center color-white cursor-hand"><a class="delete-a-under-line color-white" href="#">Contact: customerservice@yumitoy.com</a> | <a class="delete-a-under-line color-white" href="#">隐私政策</a> | <a class="delete-a-under-line color-white" href="#">服务条款</a></div>
+        </div>
+    </div>
+
+    <!-- 手机端适配 -->
+    <div id="phone">
+        <!-- 顶部导航栏 + 网页眉-->
+        <div class="header">
+            <!-- 顶部导航栏 -->
+            <div class="nav nav-phone">
+                <!-- 主页按钮 -->
+                <div class="home home-phone">
+                    <div class="home-icon"><i class="fa fa-home" aria-hidden="true"></i></div>
+                    <!-- 标题 -->
+                    <div class="title title-phone">Yumitoy</div>
+                </div>
+                <!-- 搜索框 -->
+                <div class="search-phone">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary fa fa-search" type="button" id="button-addon2-phone"></button>
+                    </div>
+                </div>
+                <!-- 弹出菜单 -->
+                <div class="pop-menu-phone">
+                    <!-- 图标 -->
+                    <a class="pop-menu-button-phone" href="#offcanvasRight-phone" role="button" data-bs-toggle="offcanvas" aria-controls="offcanvasRight-phone"><i class="fa fa-align-justify" aria-hidden="true"></i></a>
+                    <div class="offcanvas offcanvas-end pop-menu-container-phone" tabindex="-1" id="offcanvasRight-phone" aria-labelledby="offcanvasRightLabel-phone">
+                        <div class="offcanvas-header pop-menu-container-header-phone">
+                            <h5 id="offcanvasRightLabel-phone">Yumitoy</h5>
+                            <button type="button" class="btn-close text-reset btn-close-button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body pop-menu-container-body-phone">
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-phone">我的账户</a>
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-phone">购物车</a>
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-phone">新登预定</a>
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-phone">截单日期</a>
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-phone">现货发售</a>
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-phone">补款专区</a>
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-phone">R18</a>
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-phone">品牌分类</a>
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-phone"><img src="img/zh_CN.png" alt="">&nbsp;ZH</a>
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-phone"><img src="img/zh_HK.png" alt="">&nbsp;HK</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 中间登录部分 + 最近浏览商品-->
+        <div class="panel">
+            <!-- 轮播 -->
+            <div id="carouselExampleIndicators-phone" class="carousel slide carousel-main" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselExampleIndicators-phone" data-bs-slide-to="0" class="carousel-indicators-button active"></li>
+                    <li data-bs-target="#carouselExampleIndicators-phone" data-bs-slide-to="1" class="carousel-indicators-button"></li>
+                    <li  data-bs-target="#carouselExampleIndicators-phone" data-bs-slide-to="2" class="carousel-indicators-button"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/Carousel-image-1-1245x704.png" alt="..." class="d-block w-100 background">
+                        <img src="img/Carousel-image-1-1245x704.png" class="d-block w-100 image" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/Carousel-image-3-1311x1966.png" class="d-block w-100 background" alt="...">
+                        <img src="img/Carousel-image-3-1311x1966.png" class="d-block w-100 image" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/Carousel-image-2-1124x794.png" class="d-block w-100 background" alt="...">
+                        <img src="img/Carousel-image-2-1124x794.png" class="d-block w-100 image" alt="...">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators-phone" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators-phone" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+
+            <!-- 面包按钮 -->
+            <div class="icon-nav">
+                <div class="icon-nav-decoration">
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide1-2-nw.png" alt=""/>
+                        <div>Figures</div>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide2-2-nw.png" alt=""/>
+                        <div>成品可动</div>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide3-2-nw.png" alt=""/>
+                        <div>拼装模型</div>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide4-2-nw.png" alt=""/>
+                        <div>粘土人</div>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide5-2-nw.png" alt=""/>
+                        <div>毛绒玩具</div>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide6-2-nw.png" alt=""/>
+                        <div>批发</div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 现货发售 -->
+            <div class="part">
+                <!-- 标题 -->
+                <h3 class="part-title">现货发售</h3>
+                <!-- 下划线 -->
+                <div class="part-line"></div>
+                <!-- 商品 -->
+                <div class="part-goods">
+                    <!-- 商品(有货) -->
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-on-sale">现货</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-500x667.jpg" alt="">
+                                <!-- 促销 -->
+                                <div class="part-good-item-image-hot-sale"></div>
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.1000 附赠特典，首印画册、红白相框、钥匙扣等免费赠送</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span>$1,750.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-on-sale">现货</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-640x531.jpeg" alt="">
+                                <!-- 促销 -->
+                                <div class="part-good-item-image-hot-sale"></div>
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.1000 附赠特典，首印画册、红白相框、钥匙扣等免费赠送</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span>$1,750.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 商品(有货, 改价) -->
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-on-reserve">预定</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-500x451.jpg" alt="">
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span class="text-delete-line">$1,750.00</span>&nbsp;<span>$1,000.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-on-reserve">预定</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-400x600-2.webp" alt="">
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span class="text-delete-line">$1,750.00</span>&nbsp;<span>$1,000.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 商品(缺货) -->
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-not-on-reserve">预定已结束</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-1920x1080.jpg" alt="">
+                                <!-- 缺货 -->
+                                <div class="part-good-item-image-sale-out"></div>
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span class="text-delete-line">$1,750.00</span>&nbsp;<span>$1,000.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-not-on-reserve">预定已结束</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-400x600.webp" alt="">
+                                <!-- 促销 -->
+                                <div class="part-good-item-image-hot-sale"></div>
+                                <!-- 缺货 -->
+                                <div class="part-good-item-image-sale-out"></div>
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span class="text-delete-line">$1,750.00</span>&nbsp;<span>$1,000.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部页脚 -->
+        <div class="footer">
+            <!-- 版权信息 -->
+            <div class="copyright text-align-center color-white cursor-text">Copyright © 2025 Yumitoy | All Rights Reserved</div>
+            <!-- 关于我们 -->
+            <div class="about text-align-center color-white cursor-hand"><a class="delete-a-under-line color-white" href="#">Contact: customerservice@yumitoy.com</a> | <a class="delete-a-under-line color-white" href="#">隐私政策</a> | <a class="delete-a-under-line color-white" href="#">服务条款</a></div>
+        </div>
+    </div>
+
+    <!-- ipad竖屏、surface -->
+    <div id="ipad">
+        <!-- 顶部导航栏 + 网页眉-->
+        <div class="header header-ipad">
+            <div class="nav nav-ipad">
+                <!-- 主页按钮 -->
+                <div class="home">
+                    <div class="home-icon"><i class="fa fa-home" aria-hidden="true"></i></div>
+                    <!-- 标题 -->
+                    <div class="title title-ipad">Yumitoy</div>
+                </div>
+                <!-- 搜索框 -->
+                <div class="search">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary fa fa-search" type="button" id="button-addon2-ipad"></button>
+                    </div>
+                </div>
+                <!-- 个人网页折叠选项 -->
+                <!-- 弹出菜单 -->
+                <div class="pop-menu-ipad">
+                    <!-- 图标 -->
+                    <a class="pop-menu-button-ipad" href="#offcanvasRight-ipad" role="button" data-bs-toggle="offcanvas" aria-controls="offcanvasRight-ipad"><i class="fa fa-align-justify" aria-hidden="true"></i></a>
+                    <div class="offcanvas offcanvas-end pop-menu-container-ipad" tabindex="-1" id="offcanvasRight-ipad" aria-labelledby="offcanvasRightLabel-ipad">
+                        <div class="offcanvas-header pop-menu-container-header-ipad">
+                            <h5 id="offcanvasRightLabel-ipad">Yumitoy</h5>
+                            <button type="button" class="btn-close text-reset btn-close-button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body pop-menu-container-body-ipad">
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-ipad">我的账户</a>
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-ipad">购物车</a>
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-ipad"><img src="img/zh_CN.png" alt="">&nbsp;ZH</a>
+                            <a href="#" class="btn delete-a-under-line pop-menu-container-body-item-ipad"><img src="img/zh_HK.png" alt="">&nbsp;HK</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 页眉 -->
+            <!-- 只有PC端和ipad-slid才需要页眉 -->
+            <div class="nav-header-ipad">
+                <a class="delete-a-under-line" href="">新登预定</a>
+                <a class="delete-a-under-line" href="">截单日期</a>
+                <a class="delete-a-under-line" href="">现货发售</a>
+                <a class="delete-a-under-line" href="">补款专区</a>
+                <a class="delete-a-under-line" href="">R18</a>
+                <a class="delete-a-under-line" href="">品牌分类</a>
+            </div>
+        </div>
+        <!-- 中间登录部分 + 最近浏览商品-->
+        <div class="panel">
+            <!-- 轮播 -->
+            <div id="carouselExampleIndicators-ipad" class="carousel slide carousel-main" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselExampleIndicators-ipad" data-bs-slide-to="0" class="carousel-indicators-button active"></li>
+                    <li data-bs-target="#carouselExampleIndicators-ipad" data-bs-slide-to="1" class="carousel-indicators-button"></li>
+                    <li  data-bs-target="#carouselExampleIndicators-ipad" data-bs-slide-to="2" class="carousel-indicators-button"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/Carousel-image-1-1245x704.png" alt="..." class="d-block w-100 background">
+                        <img src="img/Carousel-image-1-1245x704.png" class="d-block w-100 image" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/Carousel-image-3-1311x1966.png" class="d-block w-100 background" alt="...">
+                        <img src="img/Carousel-image-3-1311x1966.png" class="d-block w-100 image" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/Carousel-image-2-1124x794.png" class="d-block w-100 background" alt="...">
+                        <img src="img/Carousel-image-2-1124x794.png" class="d-block w-100 image" alt="...">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators-ipad" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators-ipad" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+
+            <!-- 面包按钮 -->
+            <div class="icon-nav">
+                <div class="icon-nav-decoration">
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide1-2-nw.png" alt=""/>
+                        <div>Figures</div>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide2-2-nw.png" alt=""/>
+                        <div>成品可动</div>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide3-2-nw.png" alt=""/>
+                        <div>拼装模型</div>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide4-2-nw.png" alt=""/>
+                        <div>粘土人</div>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide5-2-nw.png" alt=""/>
+                        <div>毛绒玩具</div>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide6-2-nw.png" alt=""/>
+                        <div>批发</div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 现货发售 -->
+            <div class="part">
+                <!-- 标题 -->
+                <h3 class="part-title">现货发售</h3>
+                <!-- 下划线 -->
+                <div class="part-line"></div>
+                <!-- 商品 -->
+                <div class="part-goods">
+                    <!-- 商品(有货) -->
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-on-sale">现货</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-500x667.jpg" alt="">
+                                <!-- 促销 -->
+                                <div class="part-good-item-image-hot-sale"></div>
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.1000 附赠特典，首印画册、红白相框、钥匙扣等免费赠送</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span>$1,750.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-on-sale">现货</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-640x531.jpeg" alt="">
+                                <!-- 促销 -->
+                                <div class="part-good-item-image-hot-sale"></div>
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.1000 附赠特典，首印画册、红白相框、钥匙扣等免费赠送</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span>$1,750.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 商品(有货, 改价) -->
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-on-reserve">预定</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-500x451.jpg" alt="">
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span class="text-delete-line">$1,750.00</span>&nbsp;<span>$1,000.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-on-reserve">预定</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-400x600-2.webp" alt="">
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span class="text-delete-line">$1,750.00</span>&nbsp;<span>$1,000.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 商品(缺货) -->
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-not-on-reserve">预定已结束</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-1920x1080.jpg" alt="">
+                                <!-- 缺货 -->
+                                <div class="part-good-item-image-sale-out"></div>
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span class="text-delete-line">$1,750.00</span>&nbsp;<span>$1,000.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-not-on-reserve">预定已结束</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-400x600.webp" alt="">
+                                <!-- 促销 -->
+                                <div class="part-good-item-image-hot-sale"></div>
+                                <!-- 缺货 -->
+                                <div class="part-good-item-image-sale-out"></div>
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span class="text-delete-line">$1,750.00</span>&nbsp;<span>$1,000.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部页脚 -->
+        <div class="footer">
+            <!-- 版权信息 -->
+            <div class="copyright text-align-center color-white cursor-text">Copyright © 2025 Yumitoy | All Rights Reserved</div>
+            <!-- 关于我们 -->
+            <div class="about text-align-center color-white cursor-hand"><a class="delete-a-under-line color-white" href="#">Contact: customerservice@yumitoy.com</a> | <a class="delete-a-under-line color-white" href="#">隐私政策</a> | <a class="delete-a-under-line color-white" href="#">服务条款</a></div>
+        </div>
+    </div>
+
+    <!-- ipad 横屏适配 -->
+    <div id="ipad-slid">
+        <!-- 顶部导航栏 + 网页眉-->
+        <div class="header header-ipad-slid">
+            <div class="nav nav-ipad-slid">
+                <!-- 主页按钮 -->
+                <div class="home">
+                    <div class="home-icon"><i class="fa fa-home" aria-hidden="true"></i></div>
+                    <!-- 标题 -->
+                    <div class="title title-ipad-slid">Yumitoy</div>
+                    <div class="wrap"></div>
+                </div>
+                <!-- 搜索框 -->
+                <div class="search">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary fa fa-search" type="button" id="button-addon2-ipad-slid"></button>
+                    </div>
+                </div>
+                <!-- 个人网页选项 -->
+                <div class="options">
+                    <a class="delete-a-under-line color-white" href="#">我的账户</a>
+                    <a class="delete-a-under-line color-white" href="#">购物车</a>
+                    <!-- 语言 -->
+                    <a class="delete-a-under-line color-white" href="#"><img src="img/zh_CN.png" alt="">&nbsp;ZH</a>
+                    <a class="delete-a-under-line color-white" href="#"><img src="img/zh_HK.png" alt="">&nbsp;HK</a>
+                </div>
+            </div>
+            <!-- 页眉 -->
+            <!-- 只有PC端和ipad-slid才需要页眉 -->
+            <div class="nav-header-ipad-slid">
+                <a class="delete-a-under-line" href="">新登预定</a>
+                <a class="delete-a-under-line" href="">截单日期</a>
+                <a class="delete-a-under-line" href="">现货发售</a>
+                <a class="delete-a-under-line" href="">补款专区</a>
+                <a class="delete-a-under-line" href="">R18</a>
+                <a class="delete-a-under-line" href="">品牌分类</a>
+            </div>
+        </div>
+        <!-- 中间登录部分 + 最近浏览商品-->
+        <div class="panel">
+            <!-- 轮播 -->
+            <div id="carouselExampleIndicators-ipad-slid" class="carousel slide carousel-main" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselExampleIndicators-ipad-slid" data-bs-slide-to="0" class="carousel-indicators-button active"></li>
+                    <li data-bs-target="#carouselExampleIndicators-ipad-slid" data-bs-slide-to="1" class="carousel-indicators-button"></li>
+                    <li  data-bs-target="#carouselExampleIndicators-ipad-slid" data-bs-slide-to="2" class="carousel-indicators-button"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/Carousel-image-1-1245x704.png" alt="..." class="d-block w-100 background">
+                        <img src="img/Carousel-image-1-1245x704.png" class="d-block w-100 image" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/Carousel-image-3-1311x1966.png" class="d-block w-100 background" alt="...">
+                        <img src="img/Carousel-image-3-1311x1966.png" class="d-block w-100 image" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/Carousel-image-2-1124x794.png" class="d-block w-100 background" alt="...">
+                        <img src="img/Carousel-image-2-1124x794.png" class="d-block w-100 image" alt="...">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators-ipad-slid" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators-ipad-slid" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+            <!-- 面包按钮 -->
+            <div class="icon-nav">
+                <div class="icon-nav-decoration">
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide1-2.png" alt=""/>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide2-2.png" alt=""/>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide3-2.png" alt=""/>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide4-2.png" alt=""/>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide5-2.png" alt=""/>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide6-2.png" alt=""/>
+                    </a>
+                </div>
+            </div>
+            <!-- 现货发售 -->
+            <div class="part">
+                <!-- 标题 -->
+                <h3 class="part-title">现货发售</h3>
+                <!-- 下划线 -->
+                <div class="part-line"></div>
+                <!-- 商品 -->
+                <div class="part-goods">
+                    <!-- 商品(有货) -->
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-on-sale">现货</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-500x667.jpg" alt="">
+                                <!-- 促销 -->
+                                <div class="part-good-item-image-hot-sale"></div>
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.1000 附赠特典，首印画册、红白相框、钥匙扣等免费赠送</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span>$1,750.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-on-sale">现货</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-640x531.jpeg" alt="">
+                                <!-- 促销 -->
+                                <div class="part-good-item-image-hot-sale"></div>
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.1000 附赠特典，首印画册、红白相框、钥匙扣等免费赠送</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span>$1,750.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 商品(有货, 改价) -->
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-on-reserve">预定</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-500x451.jpg" alt="">
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span class="text-delete-line">$1,750.00</span>&nbsp;<span>$1,000.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-on-reserve">预定</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-400x600-2.webp" alt="">
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span class="text-delete-line">$1,750.00</span>&nbsp;<span>$1,000.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 商品(缺货) -->
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-not-on-reserve">预定已结束</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-1920x1080.jpg" alt="">
+                                <!-- 缺货 -->
+                                <div class="part-good-item-image-sale-out"></div>
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span class="text-delete-line">$1,750.00</span>&nbsp;<span>$1,000.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-not-on-reserve">预定已结束</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-400x600.webp" alt="">
+                                <!-- 促销 -->
+                                <div class="part-good-item-image-hot-sale"></div>
+                                <!-- 缺货 -->
+                                <div class="part-good-item-image-sale-out"></div>
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span class="text-delete-line">$1,750.00</span>&nbsp;<span>$1,000.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部页脚 -->
+        <div class="footer">
+            <!-- 版权信息 -->
+            <div class="copyright text-align-center color-white cursor-text">Copyright © 2025 Yumitoy | All Rights Reserved</div>
+            <!-- 关于我们 -->
+            <div class="about text-align-center color-white cursor-hand"><a class="delete-a-under-line color-white" href="#">Contact: customerservice@yumitoy.com</a> | <a class="delete-a-under-line color-white" href="#">隐私政策</a> | <a class="delete-a-under-line color-white" href="#">服务条款</a></div>
+        </div>
+    </div>
+
+    <!-- pc端适配 -->
+    <div id="pc">
+        <!-- 顶部导航栏 + 网页眉-->
+        <div class="header header-pc">
+            <div class="nav nav-pc">
+                <!-- 主页按钮 -->
+                <div class="home">
+                    <div class="home-icon"><i class="fa fa-home" aria-hidden="true"></i></div>
+                    <!-- 标题 -->
+                    <div class="title title-pc">Yumitoy</div>
+                    <div class="wrap"></div>
+                </div>
+                <!-- 搜索框 -->
+                <div class="search">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary fa fa-search" type="button" id="button-addon2-pc"></button>
+                    </div>
+                </div>
+                <!-- 个人网页选项 -->
+                <div class="options">
+                    <div><a class="delete-a-under-line color-white" href="#">我的账户</a></div>
+                    <div><a class="delete-a-under-line color-white" href="#">购物车</a></div>
+                    <!-- 语言 -->
+                    <div>
+                        <a class="delete-a-under-line color-white" href="#"><img src="img/zh_CN.png" alt="">&nbsp;ZH</a>
+                    </div>
+                    <div>
+                        <a class="delete-a-under-line color-white" href="#"><img src="img/zh_HK.png" alt="">&nbsp;HK</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 页眉 -->
+            <!-- 只有PC端和ipad-slid才需要页眉 -->
+            <div class="nav-header-pc">
+                <a class="delete-a-under-line" href="">新登预定</a>
+                <a class="delete-a-under-line" href="">截单日期</a>
+                <a class="delete-a-under-line" href="">现货发售</a>
+                <a class="delete-a-under-line" href="">补款专区</a>
+                <a class="delete-a-under-line" href="">R18</a>
+                <a class="delete-a-under-line" href="">品牌分类</a>
+            </div>
+        </div>
+        <div class="panel">
+            <!-- 轮播 -->
+            <div id="carouselExampleIndicators-pc" class="carousel slide carousel-main" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselExampleIndicators-pc" data-bs-slide-to="0" class="carousel-indicators-button active"></li>
+                    <li data-bs-target="#carouselExampleIndicators-pc" data-bs-slide-to="1" class="carousel-indicators-button"></li>
+                    <li  data-bs-target="#carouselExampleIndicators-pc" data-bs-slide-to="2" class="carousel-indicators-button"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/Carousel-image-1-1245x704.png" alt="..." class="d-block w-100 background">
+                        <img src="img/Carousel-image-1-1245x704.png" class="d-block w-100 image" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/Carousel-image-3-1311x1966.png" class="d-block w-100 background" alt="...">
+                        <img src="img/Carousel-image-3-1311x1966.png" class="d-block w-100 image" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/Carousel-image-2-1124x794.png" class="d-block w-100 background" alt="...">
+                        <img src="img/Carousel-image-2-1124x794.png" class="d-block w-100 image" alt="...">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators-pc" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators-pc" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+            <!-- 面包按钮 -->
+            <div class="icon-nav">
+                <div class="icon-nav-decoration">
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide1-2.png" alt=""/>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide2-2.png" alt=""/>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide3-2.png" alt=""/>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide4-2.png" alt=""/>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide5-2.png" alt=""/>
+                    </a>
+                    <a href="#" class="icon-nav-item">
+                        <img src="img/Slide6-2.png" alt=""/>
+                    </a>
+                </div>
+            </div>
+            <!-- 现货发售 -->
+            <div class="part">
+                <!-- 标题 -->
+                <h3 class="part-title">现货发售</h3>
+                <!-- 下划线 -->
+                <div class="part-line"></div>
+                <!-- 商品 -->
+                <div class="part-goods">
+                    <!-- 商品(有货) -->
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-on-sale">现货</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-500x667.jpg" alt="">
+                                <!-- 促销 -->
+                                <div class="part-good-item-image-hot-sale"></div>
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.1000 附赠特典，首印画册、红白相框、钥匙扣等免费赠送</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span>$1,750.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-on-sale">现货</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-640x531.jpeg" alt="">
+                                <!-- 促销 -->
+                                <div class="part-good-item-image-hot-sale"></div>
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.1000 附赠特典，首印画册、红白相框、钥匙扣等免费赠送</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span>$1,750.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 商品(有货, 改价) -->
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-on-reserve">预定</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-500x451.jpg" alt="">
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span class="text-delete-line">$1,750.00</span>&nbsp;<span>$1,000.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-on-reserve">预定</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-400x600-2.webp" alt="">
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span class="text-delete-line">$1,750.00</span>&nbsp;<span>$1,000.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 商品(缺货) -->
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-not-on-reserve">预定已结束</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-1920x1080.jpg" alt="">
+                                <!-- 缺货 -->
+                                <div class="part-good-item-image-sale-out"></div>
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span class="text-delete-line">$1,750.00</span>&nbsp;<span>$1,000.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-goods-item-border">
+                        <div class="part-good-item">
+                            <!-- 图片展示框 -->
+                            <div class="part-good-item-image">
+                                <!-- 现货or预定 -->
+                                <div class="part-good-item-image-not-on-reserve">预定已结束</div>
+                                <!-- 图片 -->
+                                <img src="img/goods-400x600.webp" alt="">
+                                <!-- 促销 -->
+                                <div class="part-good-item-image-hot-sale"></div>
+                                <!-- 缺货 -->
+                                <div class="part-good-item-image-sale-out"></div>
+                            </div>
+                            <div class="part-good-item-messages">
+                                <!-- 厂商 -->
+                                <div class="part-good-item-manufacturer"><a class="delete-a-under-line" href="#">SKYTUBE</a> </div>
+                                <!-- 品名 -->
+                                <div class="part-good-item-name"><a class="delete-a-under-line" href="#">AX-1168 冥途武装：Blade DX ver.</a> </div>
+                                <!-- 价格 -->
+                                <div class="part-good-item-price"><span class="text-delete-line">$1,750.00</span>&nbsp;<span>$1,000.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <!-- 版权信息 -->
+            <div class="copyright text-align-center color-white cursor-text">Copyright © 2025 Yumitoy | All Rights Reserved</div>
+            <!-- 关于我们 -->
+            <div class="about text-align-center color-white cursor-hand"><a class="delete-a-under-line color-white" href="#">Contact: customerservice@yumitoy.com</a> | <a class="delete-a-under-line color-white" href="#">隐私政策</a> | <a class="delete-a-under-line color-white" href="#">服务条款</a></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
